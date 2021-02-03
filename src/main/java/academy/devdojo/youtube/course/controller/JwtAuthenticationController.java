@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import academy.devdojo.youtube.course.Services.JwtUserDetailsService;
 import academy.devdojo.youtube.course.config.JwtTokenUtil;
+import academy.devdojo.youtube.course.config.JwtUserDetailsService;
 import academy.devdojo.youtube.course.model.JwtRequest;
 import academy.devdojo.youtube.course.model.JwtResponse;
 

@@ -12,10 +12,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 import io.jsonwebtoken.ExpiredJwtException;
 
-public class JwtRequestFilter {
+public class JwtRequestFilter extends OncePerRequestFilter{
 
 	@Autowired
 	private JwtUserDetailsService jwtUserDetailsService;
@@ -27,8 +28,8 @@ public class JwtRequestFilter {
 			throws ServletException, IOException {
 		final String requestTokenHeader = request.getHeader("Authorization");
 
-		String username = null;
-		String jwtToken = null;
+		String username = "usu";
+		String jwtToken = "teste";
 
 		// JWT Token está no form "Bearer token". Remova a palavra Bearer e pegue
 		// somente o Token
